@@ -6,4 +6,4 @@ tasks:
     tags: ["latest"]
     dockerfile: Dockerfile
     context: .
-    runner: razorops/go
+    runner: golang
