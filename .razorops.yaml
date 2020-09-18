@@ -1,18 +1,10 @@
 
 tasks:
-  build-binary:
-    runner: razorci/go
-    variables:
-    - CGO_ENABLED=0
-    - GO111MODULE=on
-    steps:
-    - cache/pull:
-        key: go-mod-{{ checksum "go.sum" }}
-
-    - comamnds:
-        - go mod download -json
-        - go build -ldflags "-X main.Version={{ .Env.CI_COMMIT_SHA }}" ./cmd
-
-    - cache/push:
-        key: go-mod-{{ checksum "go.sum" }}
-        paths: [vendor]
+	build-image:
+		type: build
+		image: saurabh3460/go-api-test
+		push: true
+		tags: ["latest"]
+		dockerfile: Dockerfile
+		context: .
+		\\\\\\
