@@ -1,1 +1,9 @@
-
+tasks:
+	build-image:
+		type: build
+		image: saurabh3460/go-api-test
+		push: true
+		tags: ["latest"]
+		dockerfile: Dockerfile
+		context: .
+		
