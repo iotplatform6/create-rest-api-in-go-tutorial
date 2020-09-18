@@ -8,7 +8,6 @@ import (
     "log"
     "io/ioutil"
     "net/http"
-
     "github.com/gorilla/mux"
 )
 
@@ -43,7 +42,6 @@ func returnSingleArticle(w http.ResponseWriter, r *http.Request) {
     }
 }
 
-
 func createNewArticle(w http.ResponseWriter, r *http.Request) {
     // get the body of our POST request
     // unmarshal this into a new Article struct
@@ -54,20 +52,17 @@ func createNewArticle(w http.ResponseWriter, r *http.Request) {
     // update our global Articles array to include
     // our new Article
     Articles = append(Articles, article)
-
     json.NewEncoder(w).Encode(article)
 }
 
 func deleteArticle(w http.ResponseWriter, r *http.Request) {
     vars := mux.Vars(r)
     id := vars["id"]
-
     for index, article := range Articles {
         if article.Id == id {
             Articles = append(Articles[:index], Articles[index+1:]...)
         }
     }
-
 }
 
 func handleRequests() {
