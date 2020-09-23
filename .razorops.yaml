@@ -1,9 +1,13 @@
+global:
+  runner: razorci/base
 tasks:
   build-image:
     type: build
-    image: saurabh3460/go-api-test
+    image: go-api-test
     push: true
     tags: ["latest"]
     dockerfile: Dockerfile
     context: .
-    runner: golang
+    url: iotplatform6.jfrog.io
+    Username: iotplatform6@gmail.com
+    Password: Qazwsx123@
