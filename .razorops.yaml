@@ -3,11 +3,12 @@ global:
 tasks:
   build-image:
     steps:
-      image: iotplatform6.jfrog.io/go-api/hello-world
-      push: true
-      tags: ["latest"]
-      dockerfile: Dockerfile
-      context: .
-      url: iotplatform6.jfrog.io
-      Username: iotplatform6@gmail.com
-      Password: Qazwsx123@
+      - docker/build:
+        image: go-api
+        push: true
+        tags: ["latest"]
+        dockerfile: Dockerfile
+        context: .
+      - docker/push:
+          image: iotplatform6.jfrog.io/dockerhub/go-api
+          tags: ["latest"]
