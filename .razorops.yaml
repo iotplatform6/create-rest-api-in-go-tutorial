@@ -4,11 +4,11 @@ tasks:
   build-image:
     steps:
       - docker-build:
-        image: go-api
+        image: go_api
         push: true
         tags: ["latest"]
         dockerfile: Dockerfile
         context: .
       - docker-push:
-          image: iotplatform6.jfrog.io/dockerhub/go-api
+          image: iotplatform6.jfrog.io/dockerhub/go_api
           tags: ["latest"]
