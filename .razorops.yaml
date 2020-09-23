@@ -1,10 +1,10 @@
 global:
-  runner: razorci/base
+  runner: ubuntu
 tasks:
   build-image:
     steps:
       - docker-build:
-        image: dockerhub/goapi
+        image: goapi
         # push: true
         tags: ["latest"]
         dockerfile: Dockerfile
