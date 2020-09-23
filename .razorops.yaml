@@ -1,13 +1,22 @@
-global:
-  runner: ubuntu
 tasks:
   build-image:
     steps:
     - docker-build:
-        image: goapi
+        image: dockerhub/goapi
         tags: ["latest"]
         dockerfile: Dockerfile
         context: .
-    - docker-push:
-        image: dockerhub/goapi
-        ags: ["latest"]
+        runner: golang
+    # - docker-push:
+    #     image: dockerhub/goapi
+    #     ags: ["latest"]
+
+# tasks:
+#   build-image:
+#     type: build
+#     image: saurabh3460/go-api-test
+#     push: true
+#     tags: ["latest"]
+#     dockerfile: Dockerfile
+#     context: .
+#     runner: golang
