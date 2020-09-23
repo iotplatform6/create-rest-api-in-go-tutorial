@@ -5,7 +5,7 @@ tasks:
     tags: ["latest"]
     dockerfile: Dockerfile
     context: .
-    runner: golang
+    runner: dockerhub/goapi
 
     # - docker-push:
     #     image: dockerhub/goapi
