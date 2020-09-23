@@ -4,11 +4,11 @@ tasks:
   build-image:
     steps:
       - docker-build:
-        image: dockerhub/go_api
+        image: dockerhub/goapi
         # push: true
         tags: ["latest"]
         dockerfile: Dockerfile
         context: .
       - docker-push:
-          image: dockerhub/go_api
+          image: dockerhub/goapi
           tags: ["latest"]
