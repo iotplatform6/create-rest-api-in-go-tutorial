@@ -3,11 +3,11 @@ global:
 tasks:
   build-image:
     steps:
-      - docker-build:
+    - docker-build:
         image: goapi
         tags: ["latest"]
         dockerfile: Dockerfile
         context: .
-      - docker-push:
-          image: dockerhub/goapi
-          tags: ["latest"]
+    - docker-push:
+        image: dockerhub/goapi
+        ags: ["latest"]
