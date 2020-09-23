@@ -1,4 +1,4 @@
-module github.com/TutorialEdge/create-rest-api-in-go-tutorial
+module github.com/iotplatform6/go-cicd
 
 go 1.12
 
