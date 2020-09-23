@@ -5,7 +5,6 @@ tasks:
     steps:
       - docker-build:
         image: goapi
-        # push: true
         tags: ["latest"]
         dockerfile: Dockerfile
         context: .
