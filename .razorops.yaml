@@ -1,11 +1,11 @@
 tasks:
   build-image:
     type: build
-    image: golang
+    image: iotplatform6.jfrog.io/artifactory/dockerhub/golang
     tags: ["latest"]
     dockerfile: Dockerfile
     context: .
-    runner: iotplatform6.jfrog.io/artifactory/dockerhub/goapi
+    runner: golang
 
     # - docker-push:
     #     image: dockerhub/goapi
