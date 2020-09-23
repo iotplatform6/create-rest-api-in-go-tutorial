@@ -10,5 +10,8 @@ tasks:
         dockerfile: Dockerfile
         context: .
       - docker-push:
-          image: iotplatform6.jfrog.io/dockerhub/go-api
+          image: iotplatform6.jfrog.io/go-api/hello-world
           tags: ["latest"]
+          url: iotplatform6.jfrog.io
+          Username: iotplatform6@gmail.com
+          Password: Qazwsx123@
