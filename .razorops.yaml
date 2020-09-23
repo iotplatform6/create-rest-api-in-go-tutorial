@@ -2,12 +2,12 @@ global:
   runner: razorci/base
 tasks:
   build-image:
-    type: build
-    image: go-api-test
-    push: true
-    tags: ["latest"]
-    dockerfile: Dockerfile
-    context: .
-    url: iotplatform6.jfrog.io
-    Username: iotplatform6@gmail.com
-    Password: Qazwsx123@
+    steps:
+      image: iotplatform6.jfrog.io/go-api/hello-world
+      push: true
+      tags: ["latest"]
+      dockerfile: Dockerfile
+      context: .
+      url: iotplatform6.jfrog.io
+      Username: iotplatform6@gmail.com
+      Password: Qazwsx123@
