@@ -1,8 +1,18 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'go'
+    }
+
+  }
   stages {
     stage('build') {
-      agent any
+      agent {
+        docker {
+          image 'golang'
+        }
+
+      }
       steps {
         sh 'go build -o api'
       }
