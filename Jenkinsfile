@@ -1,18 +1,13 @@
 pipeline {
   agent {
     docker {
-      image 'go'
+      image 'golang'
+      args '-p 3000:10000'
     }
 
   }
   stages {
     stage('build') {
-      agent {
-        docker {
-          image 'golang'
-        }
-
-      }
       steps {
         sh 'go build -o api'
       }
